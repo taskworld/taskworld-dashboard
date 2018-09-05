@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "pages": {
+      ".read": "(auth.provider == 'google' && auth.token.email.endsWith('@taskworld.com')) || root.child('whitelist').child(auth.uid).exists()"
+    },
+    "widgets": {
+      ".read": "(auth.provider == 'google' && auth.token.email.endsWith('@taskworld.com')) || root.child('whitelist').child(auth.uid).exists()"
+    }
+  }
+}
