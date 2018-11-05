@@ -10,7 +10,7 @@
     body {
       background: #0d1017;
       color: #f3f4f5;
-      font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
 
     .dashboard-contents {
@@ -76,6 +76,10 @@
       flex-direction: column;
     }
 
+    .dashboard-widget-view:focus-within {
+      box-shadow: 0 0 8px #137679;
+    }
+
     .dashboard-widget-title {
       flex: none;
       background: #004f51;
@@ -98,6 +102,20 @@
       overflow: auto;
     }
 
+    .dashboard-widget-contents-viewport:focus {
+      outline: none;
+    }
+
+    .dashboard-widget-contents-viewport::-webkit-scrollbar {
+      width: 3px;
+      background: #004f51;
+    }
+
+    .dashboard-widget-contents-viewport::-webkit-scrollbar-thumb {
+      width: 3px;
+      background-color: #137679;
+    }
+
     .widget {
       position: absolute;
     }
@@ -106,6 +124,7 @@
 
 <body>
   <div id="app">Loading</div>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
@@ -121,7 +140,7 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="main.js"></script>
+  <script type="text/babel" data-presets="es2015,es2016,es2017" src="main.js"></script>
 </body>
 
 </html>

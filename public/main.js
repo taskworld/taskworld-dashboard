@@ -90,7 +90,7 @@ Vue.component('dashboard-widget', {
         <strong>{{name}}</strong><span v-if="data.updated"> — last updated {{new Date(data.updated).toString()}}</span>
       </div>
       <div class="dashboard-widget-contents">
-        <div v-html="data.contents" class="dashboard-widget-contents-viewport" />
+        <div tabindex="0" v-html="data.contents" class="dashboard-widget-contents-viewport" />
       </div>
     </div>
   </div>`,
