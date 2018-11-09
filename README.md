@@ -3,6 +3,8 @@
 A simple dashboard platform that runs on Firebase Database.
 We use it to display metrics on our big TV screens.
 
+![screenshot](taskworld-dashboard-example-screenshot.png)
+
 ## Design goals
 
 Our goal is to:
